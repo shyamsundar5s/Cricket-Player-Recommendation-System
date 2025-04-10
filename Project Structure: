@@ -1,0 +1,10 @@
+player_recommender/
+│
+├── app.py
+├── model.py
+├── templates/
+│   └── index.html
+├── static/
+│   └── style.css
+└── data/
+    └── player_data.csv
