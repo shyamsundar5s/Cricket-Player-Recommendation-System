@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Player Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Cricket Player Rating Predictor</h1>
+    <form method="POST">
+        <label>Matches:</label>
+        <input type="number" name="matches" step="any" required><br>
+        <label>Runs:</label>
+        <input type="number" name="runs" step="any" required><br>
+        <label>Wickets:</label>
+        <input type="number" name="wickets" step="any" required><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if rating is not none %}
+        <h2>Predicted Rating: {{ rating }}</h2>
+    {% endif %}
+</body>
+</html>
